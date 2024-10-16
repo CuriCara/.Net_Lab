@@ -13,4 +13,6 @@
     <dd>Товары измеряются в разных единицах (зёрна в килограммах, молоко в литрах, яйца в штуках и тд)</dd>
     <dd>Администратор получает на почту отчёт по собранным товарам за день</dd>
 </dl>
-![image](https://github.com/user-attachments/assets/72615508-2bba-40ce-972c-fb989d2ce470)
+<dl>Model od database</dl>
+[image](https://github.com/user-attachments/assets/04beabbd-9ce7-4ed0-a284-5c679e2af1c7)
+
