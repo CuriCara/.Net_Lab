@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farm", "Farm\Farm.csproj", "{0157FAD5-1C23-4A7C-88A4-ED1F84807673}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{9D24822E-B2A9-4283-BBFA-7F34763B2A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{CB81AB08-486E-4B98-BDEC-03CF149A5BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0157FAD5-1C23-4A7C-88A4-ED1F84807673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0157FAD5-1C23-4A7C-88A4-ED1F84807673}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0157FAD5-1C23-4A7C-88A4-ED1F84807673}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0157FAD5-1C23-4A7C-88A4-ED1F84807673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D24822E-B2A9-4283-BBFA-7F34763B2A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D24822E-B2A9-4283-BBFA-7F34763B2A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D24822E-B2A9-4283-BBFA-7F34763B2A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D24822E-B2A9-4283-BBFA-7F34763B2A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB81AB08-486E-4B98-BDEC-03CF149A5BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB81AB08-486E-4B98-BDEC-03CF149A5BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB81AB08-486E-4B98-BDEC-03CF149A5BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB81AB08-486E-4B98-BDEC-03CF149A5BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
