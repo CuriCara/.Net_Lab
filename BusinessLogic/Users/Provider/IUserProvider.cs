@@ -4,6 +4,6 @@ namespace BusinessLogic.Users.Provider;
 
 public interface IUserProvider
 {
-    IEnumerable<UserModel> GetUsers();
+    IEnumerable<UserModel> GetUsers(UserFilterModel filter = null);
     UserModel GetInfo(int id);
 }

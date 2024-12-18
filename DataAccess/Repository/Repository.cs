@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using DataAccess.Entity;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,11 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
     public IQueryable<T> GetAll()
     {
         return _context.Set<T>();
+    }
+    
+    public IQueryable<T> GetAll(Expression<Func<T, bool>> predicate)
+    {
+        return _context.Set<T>().Where(predicate);
     }
 
     public T? GetById(int id)
