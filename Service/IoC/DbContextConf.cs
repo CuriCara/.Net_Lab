@@ -6,7 +6,7 @@ using DataAccess;
 public class DbContextConf
 {
     
-    public static void ConfigreService(WebApplicationBuilder builder)
+    public static void ConfigureService(WebApplicationBuilder builder)
     {
         var config = new ConfigurationBuilder()
             .AddJsonFile("D:\\RiderLab\\Farm\\Service\\appsettings.json", optional: false)

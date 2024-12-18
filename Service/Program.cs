@@ -2,7 +2,7 @@ using Service.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
-DbContextConf.ConfigreService(builder);
+DbContextConf.ConfigureService(builder);
 SerilogConf.ConfigureService(builder);
 SwaggerConf.ConfigureServices(builder.Services);
 
