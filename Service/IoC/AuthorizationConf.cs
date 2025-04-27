@@ -1,7 +1,7 @@
 using DataAccess;
 using DataAccess.Entity;
 using Duende.IdentityServer.Models;
-using Duende.IdentityServer;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Logging;

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repository;
 
-public class Repository<T> : IRepository<T> where T : BaseEntity
+public class Repository<T> : IRepository<T> where T : class, IBaseEntity
 {
     private DbContext _context;
 
@@ -32,13 +32,15 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         if (entity.CreationTime == entity.ModificationTime)
         {
-            entity.init();
+            entity.ModificationTime = DateTime.UtcNow;
             var result = _context.Set<T>().Add(entity);
             _context.SaveChanges();
             return result.Entity;
         }
         else
         {
+            entity.ExternalId = Guid.NewGuid();
+            entity.CreationTime = DateTime.UtcNow;
             entity.ModificationTime = DateTime.UtcNow;
             var result = _context.Set<T>().Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;

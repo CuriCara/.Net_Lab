@@ -4,7 +4,7 @@ namespace DataAccess.Repository;
 
 using DataAccess.Entity;
 
-public interface IRepository<T> where T : BaseEntity
+public interface IRepository<T> where T : class,IBaseEntity
 {
         IQueryable<T> GetAll();
         

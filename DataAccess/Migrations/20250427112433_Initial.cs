@@ -45,11 +45,23 @@ namespace DataAccess.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     UserName = table.Column<string>(type: "text", nullable: false),
-                    HashPassword = table.Column<string>(type: "text", nullable: false),
+                    ExternalId = table.Column<Guid>(type: "uuid", nullable: false),
+                    ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    PasswordHash = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: false),
                     RoleId = table.Column<int>(type: "integer", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    NormalizedUserName = table.Column<string>(type: "text", nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "text", nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "boolean", nullable: false),
+                    SecurityStamp = table.Column<string>(type: "text", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "text", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "text", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "boolean", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "boolean", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "boolean", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,6 +82,7 @@ namespace DataAccess.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     ProductName = table.Column<string>(type: "text", nullable: false),
                     UoMId = table.Column<int>(type: "integer", nullable: false),
+                    ExternalId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -93,6 +106,7 @@ namespace DataAccess.Migrations
                     Mark = table.Column<int>(type: "integer", nullable: false),
                     DateMark = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UserId = table.Column<int>(type: "integer", nullable: false),
+                    ExternalId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -117,6 +131,7 @@ namespace DataAccess.Migrations
                     Quantity = table.Column<int>(type: "integer", nullable: false),
                     UserId = table.Column<int>(type: "integer", nullable: false),
                     ProductId = table.Column<int>(type: "integer", nullable: false),
+                    ExternalId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -147,6 +162,7 @@ namespace DataAccess.Migrations
                     GeneralProducts = table.Column<string>(type: "text", nullable: false),
                     SentEmail = table.Column<bool>(type: "boolean", nullable: false),
                     HarvestId = table.Column<int>(type: "integer", nullable: false),
+                    ExternalId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ModificationTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
